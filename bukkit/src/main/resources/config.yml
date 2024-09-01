@@ -1,0 +1,92 @@
+#How often scoreboards are checked for updates in ticks
+#If an individual scoreboard has a smaller delay, it will only update every minimum-update-delay
+#Requires a plugin restart to reload this value
+minimum-update-delay: 20
+
+#The scoreboard to show players unless there is a conditional board the player can see
+base-scoreboard: default
+
+#World based conditional scoreboards that are shown before the base-scoreboard
+world-based-scoreboards:
+  world: overworld
+  world_nether: default
+
+scoreboards:
+  default:
+    title:
+      text:
+      - '<blue><bold>Improved<white>Scoreboard'
+      - '<white><bold>Improved<blue>Scoreboard'
+      delay: 20
+    lines:
+      '9':
+        text: '<dark_gray><bold><strikethrough>------------'
+        delay: -1
+      '8':
+        text: '<blue><bold>Player:'
+        delay: -1
+      '7':
+        text: '<bold>Name: <reset><gray>%player_name%'
+        delay: 20
+      '6':
+        text: '<bold>World: <reset><gray>%player_world%'
+        delay: 20
+      '5':
+        text: ''
+        delay: -1
+      '4':
+        text: '<blue><bold>Server:'
+        delay: -1
+      '3':
+        text: '<bold>TPS: <reset><gray>%server_tps_1%'
+        delay: 20
+      '2':
+        text: '<bold>Players: <reset><gray>%server_online%'
+        delay: 20
+      '1':
+        text: '<dark_gray><bold><strikethrough>------------'
+        delay: -1
+      '0':
+        text: '<bold>IP: <reset><gray>server.com'
+        delay: -1
+  overworld:
+    title:
+      text:
+        - '<transition:blue:white:0.0><bold>ImprovedScoreboard World'
+        - '<transition:blue:white:0.2><bold>ImprovedScoreboard World'
+        - '<transition:blue:white:0.4><bold>ImprovedScoreboard World'
+        - '<transition:blue:white:0.6><bold>ImprovedScoreboard World'
+        - '<transition:blue:white:0.8><bold>ImprovedScoreboard World'
+        - '<transition:blue:white:1.0><bold>ImprovedScoreboard World'
+      delay: 20
+    lines:
+      '9':
+        text: '<dark_gray><bold><strikethrough>------------'
+        delay: -1
+      '8':
+        text: '<blue><bold>Player:'
+        delay: -1
+      '7':
+        text: '<bold>Name: <reset><gray>%player_name%'
+        delay: 20
+      '6':
+        text: '<bold>World: <reset><gray>%player_world%'
+        delay: 20
+      '5':
+        text: ''
+        delay: -1
+      '4':
+        text: '<blue><bold>Server:'
+        delay: -1
+      '3':
+        text: '<bold>TPS: <reset><gray>%server_tps_1%'
+        delay: 20
+      '2':
+        text: '<bold>Players: <reset><gray>%server_online%'
+        delay: 20
+      '1':
+        text: '<dark_gray><bold><strikethrough>------------'
+        delay: -1
+      '0':
+        text: '<bold>IP: <reset><gray>server.com'
+        delay: -1
